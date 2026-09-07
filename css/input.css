@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   ARTESANÍAS V.V — capa táctil
+   Textura de yeso, arcos de hornacina y luz de mañana.
+   Todo hecho con CSS/SVG inline: no suma ni un pedido de red.
+   ============================================================ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* Grano de yeso: ruido SVG muy sutil sobre el fondo crema.
+       Pesa ~200 bytes y no requiere descargar ninguna imagen. */
+    background-color: #FCF9F4;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
+  }
+
+  /* Sacamos el aspecto "input de sistema" del buscador */
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+}
+
+@layer components {
+  /* --- La superficie de yeso: cards, drawer, chips --- */
+  .superficie {
+    background-color: #F7F1E7;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23m)' opacity='0.07'/%3E%3C/svg%3E");
+  }
+
+  /* --- El arco: la forma firma. Las piezas se ven como en una hornacina --- */
+  .arco {
+    border-radius: 9999px 9999px 1.5rem 1.5rem;
+  }
+
+  /* --- Trazo dibujado a mano para separar secciones --- */
+  .trazo {
+    height: 8px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 8' preserveAspectRatio='none'%3E%3Cpath d='M1 5.2C34 2.6 71 6.4 104 4.1c33-2.3 70 2.6 103 .4' stroke='%23C6A175' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
+
+  /* --- Botón sello: se hunde al tocarlo, como un sello de lacre --- */
+  .btn-sello {
+    box-shadow: 0 4px 0 -1px rgba(94, 69, 46, 0.28);
+    transition: transform 120ms ease, box-shadow 120ms ease;
+  }
+  .btn-sello:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 -1px rgba(94, 69, 46, 0.28);
+  }
+
+  /* --- Scroll horizontal con snap para las filas de categoría --- */
+  .fila-scroll {
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 1.25rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .fila-scroll > * {
+    scroll-snap-align: start;
+  }
+
+  /* --- Ocultar scrollbar sin perder el scroll --- */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* --- Recorte de texto a 2 líneas --- */
+  .clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

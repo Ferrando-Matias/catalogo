@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Artesanías V.V | Piezas en yeso y velas artesanales</title>
+<meta name="description" content="Catálogo de Artesanías V.V — velas, figuras en yeso 3D, bandejas, floreros y centros de mesa. Armá tu pedido y coordinalo por WhatsApp." />
+<meta name="theme-color" content="#2E2116" />
+
+<!-- Open Graph: cómo se ve el link cuando lo comparten por WhatsApp -->
+<meta property="og:title" content="Artesanías V.V" />
+<meta property="og:description" content="Piezas en yeso y velas artesanales. Armá tu pedido desde el celular." />
+<meta property="og:type" content="website" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%232E2116'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='52' fill='%23D7B98F' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-sans text-tierra-900 antialiased min-h-screen flex flex-col">
+
+<!-- ══════════════════ PORTADA ══════════════════ -->
+<header class="relative overflow-hidden bg-tierra-900 text-yeso-100">
+  <!-- Arco de luz detrás de la marca -->
+  <div class="absolute -top-28 left-1/2 -translate-x-1/2 w-[420px] h-[420px] rounded-full bg-camel-500/20 blur-3xl pointer-events-none"></div>
+
+  <div class="relative max-w-5xl mx-auto px-5 pt-8 pb-7">
+    <div class="flex items-start justify-between gap-4">
+      <div>
+        <p class="text-[10px] uppercase tracking-[0.3em] text-camel-300 mb-2">Hecho a mano</p>
+        <h1 class="font-display text-[2.6rem] leading-[0.95] font-semibold text-yeso-100">
+          Artesanías<br /><span class="text-camel-300 italic">V.V</span>
+        </h1>
+      </div>
+
+      <a href="https://www.instagram.com/artesaniasv.v" target="_blank" rel="noopener"
+         class="shrink-0 flex items-center gap-1.5 border border-camel-300/40 text-camel-300 rounded-full pl-2.5 pr-3 py-1.5 text-xs font-medium active:scale-95 transition">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+        Seguinos
+      </a>
+    </div>
+
+    <p class="mt-4 text-sm text-yeso-200/75 max-w-sm leading-relaxed">
+      Velas, figuras, bandejas y centros de mesa moldeados uno por uno. Elegí tus piezas y te las reservamos.
+    </p>
+  </div>
+
+  <!-- Borde superior de la sección de catálogo: un arco, no una línea recta -->
+  <div class="h-6 bg-yeso-50 rounded-t-[2.5rem] -mb-px"></div>
+</header>
+
+<!-- ══════════════════ BARRA STICKY: BUSCADOR + CATEGORÍAS ══════════════════ -->
+<div id="barra" class="sticky top-0 z-30 bg-yeso-50/95 backdrop-blur-sm border-b border-yeso-300/50">
+  <div class="max-w-5xl mx-auto px-5 pt-3 pb-2.5">
+    <div class="relative">
+      <svg class="w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2 text-tierra-600/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="search-input" type="search" inputmode="search" placeholder="Buscar una pieza..."
+        class="superficie w-full text-tierra-900 placeholder-tierra-600/50 text-sm rounded-full pl-11 pr-4 py-3 border border-yeso-300 focus:outline-none focus:border-camel-400 focus:ring-2 focus:ring-camel-300/40 transition" />
+    </div>
+  </div>
+
+  <nav id="category-chips" class="max-w-5xl mx-auto px-5 pb-3 flex gap-2 overflow-x-auto scrollbar-none">
+    <!-- chips generados por JS -->
+  </nav>
+</div>
+
+<!-- ══════════════════ CATÁLOGO ══════════════════ -->
+<main id="contenido" class="w-full max-w-5xl mx-auto px-5 pt-5 flex-1">
+  <!-- render dinámico: filas por categoría (vista Todos) o grilla (vista filtrada) -->
+</main>
+
+<p id="no-results" class="hidden text-center text-tierra-600 py-20 px-8">
+  <span class="block font-display text-2xl text-tierra-800 mb-1">Sin resultados</span>
+  No encontramos piezas con ese nombre. Probá con otra palabra o mirá todas las categorías.
+</p>
+
+<!-- ══════════════════ PIE ══════════════════ -->
+<footer class="mt-14 bg-tierra-900 text-yeso-200 rounded-t-[2.5rem]">
+  <div class="max-w-5xl mx-auto px-5 pt-10 pb-28 text-center">
+    <p class="font-display text-2xl text-yeso-100 mb-1">Artesanías <span class="text-camel-300 italic">V.V</span></p>
+    <div class="trazo w-24 mx-auto my-4 opacity-70"></div>
+    <p class="text-sm text-yeso-200/70 max-w-xs mx-auto leading-relaxed mb-6">
+      Lomas de Zamora, Buenos Aires.<br />
+      Los pedidos quedan pendientes de aprobación y se confirman con seña.
+    </p>
+    <div class="flex items-center justify-center gap-3">
+      <a href="https://www.instagram.com/artesaniasv.v" target="_blank" rel="noopener"
+         class="flex items-center gap-2 bg-yeso-100 text-tierra-900 rounded-full px-4 py-2.5 text-sm font-medium active:scale-95 transition">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+        @artesaniasv.v
+      </a>
+      <a id="footer-wa" href="#" target="_blank" rel="noopener"
+         class="flex items-center gap-2 border border-camel-300/40 text-camel-300 rounded-full px-4 py-2.5 text-sm font-medium active:scale-95 transition">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.58 15.13L2 22l4.98-1.35A10 10 0 1012 2zm0 18a8 8 0 01-4.31-1.26l-.31-.19-2.95.8.79-2.88-.2-.3A8 8 0 1112 20z"/><path d="M16.5 13.9c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════ BOTÓN FLOTANTE: VER PEDIDO ══════════════════ -->
+<button id="fab-cart" onclick="abrirCarrito()"
+  class="btn-sello fixed bottom-5 left-1/2 -translate-x-1/2 z-30 bg-tierra-800 text-yeso-100 rounded-full pl-5 pr-3 py-3.5 flex items-center gap-3 font-medium text-sm translate-y-24 opacity-0 transition-all duration-300">
+  <span>Ver mi pedido</span>
+  <span id="fab-badge" class="bg-camel-400 text-tierra-900 text-xs font-semibold min-w-[1.5rem] h-6 px-1.5 rounded-full flex items-center justify-center">0</span>
+</button>
+
+<!-- ══════════════════ AVISO "AGREGADO" ══════════════════ -->
+<div id="toast" class="fixed left-1/2 -translate-x-1/2 bottom-[7.25rem] z-40 superficie border border-yeso-300 text-tierra-800 text-sm font-medium px-4 py-2.5 rounded-full shadow-pieza opacity-0 pointer-events-none transition-all duration-200">
+  Sumado a tu pedido
+</div>
+
+<!-- ══════════════════ PEDIDO (DRAWER) ══════════════════ -->
+<div id="cart-overlay" class="fixed inset-0 z-40 bg-tierra-900/60 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+<aside id="cart-drawer" class="fixed bottom-0 left-0 right-0 sm:left-auto sm:top-0 sm:w-[430px] z-50 h-[92vh] sm:h-full bg-yeso-50 rounded-t-[2rem] sm:rounded-none shadow-pieza translate-y-full sm:translate-y-0 sm:translate-x-full transition-transform duration-300 flex flex-col">
+
+  <div class="relative bg-tierra-900 text-yeso-100 px-5 pt-5 pb-6 rounded-t-[2rem] sm:rounded-none">
+    <div class="sm:hidden w-10 h-1 bg-yeso-100/25 rounded-full mx-auto mb-4"></div>
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-[10px] uppercase tracking-[0.28em] text-camel-300">Artesanías V.V</p>
+        <h2 class="font-display text-2xl font-semibold mt-0.5">Tu pedido</h2>
+      </div>
+      <button onclick="cerrarCarrito()" class="p-2 -mr-1 rounded-full active:scale-90 transition" aria-label="Cerrar">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="cart-items" class="flex-1 overflow-y-auto px-5 py-2 -mt-3 bg-yeso-50 rounded-t-[1.5rem]">
+    <!-- items generados por JS -->
+  </div>
+
+  <div id="cart-empty" class="hidden flex-1 flex flex-col items-center justify-center px-10 text-center">
+    <div class="w-20 h-24 arco superficie border border-yeso-300 mb-4"></div>
+    <p class="font-display text-xl text-tierra-800">Todavía no elegiste piezas</p>
+    <p class="text-sm text-tierra-600 mt-1">Tocá "Sumar" en el catálogo y aparecen acá.</p>
+    <button onclick="cerrarCarrito()" class="mt-5 text-sm font-medium text-camel-600 underline underline-offset-4">Volver al catálogo</button>
+  </div>
+
+  <div id="cart-footer" class="superficie border-t border-yeso-300 px-5 py-4 space-y-3">
+    <div class="flex items-end justify-between">
+      <span class="text-sm text-tierra-600">Total estimado</span>
+      <span id="cart-total" class="font-display text-2xl font-semibold text-tierra-900">$0</span>
+    </div>
+    <p id="cart-consultar-note" class="hidden text-xs text-terracota-600 -mt-1">Hay piezas a consultar que no se suman al total.</p>
+
+    <div class="space-y-2 pt-1">
+      <input id="input-nombre" type="text" placeholder="Tu nombre" autocomplete="name"
+        class="w-full bg-yeso-50 border border-yeso-300 rounded-xl px-4 py-3 text-sm placeholder-tierra-600/50 focus:outline-none focus:border-camel-400 focus:ring-2 focus:ring-camel-300/40 transition" />
+      <input id="input-telefono" type="tel" inputmode="tel" placeholder="Tu teléfono" autocomplete="tel"
+        class="w-full bg-yeso-50 border border-yeso-300 rounded-xl px-4 py-3 text-sm placeholder-tierra-600/50 focus:outline-none focus:border-camel-400 focus:ring-2 focus:ring-camel-300/40 transition" />
+      <p id="form-error" class="hidden text-xs text-terracota-600 px-1"></p>
+    </div>
+
+    <p class="text-[11px] leading-relaxed text-tierra-600 bg-yeso-200/60 border border-yeso-300 rounded-xl px-3.5 py-2.5">
+      El pedido queda <strong class="text-tierra-800">pendiente de aprobación</strong> y se confirma con <strong class="text-tierra-800">seña</strong>. La entrega se coordina por WhatsApp.
+    </p>
+
+    <button id="btn-checkout" onclick="enviarPedido()"
+      class="btn-sello w-full flex items-center justify-center gap-2.5 bg-tierra-800 text-yeso-100 font-medium rounded-full py-4">
+      <svg class="w-5 h-5 text-camel-300" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.58 15.13L2 22l4.98-1.35A10 10 0 1012 2zm0 18a8 8 0 01-4.31-1.26l-.31-.19-2.95.8.79-2.88-.2-.3A8 8 0 1112 20z"/><path d="M16.5 13.9c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
+      Enviar pedido por WhatsApp
+    </button>
+  </div>
+</aside>
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

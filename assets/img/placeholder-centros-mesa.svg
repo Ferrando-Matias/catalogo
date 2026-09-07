@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Centro de Mesa">
+  <defs>
+    <filter id="grano">
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <linearGradient id="fondo" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#F3E9D9"/>
+      <stop offset="100%" stop-color="#E3D2BB"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#fondo)"/>
+  <circle cx="200" cy="215" r="128" fill="#F7F1E7" fill-opacity="0.55"/>
+  <g fill="none" stroke="#9C7048" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 150c8 10 13 17 13 24a13 13 0 0 1-26 0c0-7 5-14 13-24z" fill="#DCC9AC"/>
+    <path d="M250 138c8 10 13 17 13 24a13 13 0 0 1-26 0c0-7 5-14 13-24z" fill="#DCC9AC"/>
+    <path d="M130 196h40v56h-40zM230 184h40v68h-40z" fill="#DCC9AC"/>
+    <ellipse cx="200" cy="272" rx="112" ry="40" fill="#DCC9AC"/>
+    <path d="M88 272v14c0 22 50 40 112 40s112-18 112-40v-14"/>
+  </g>
+  <text x="200" y="432" font-family="Georgia, serif" font-size="27" fill="#7A5B3D" text-anchor="middle" letter-spacing="1">Centro de Mesa</text>
+  <rect width="400" height="500" filter="url(#grano)" opacity="0.07"/>
+</svg>

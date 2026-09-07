@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Bandejas">
+  <defs>
+    <filter id="grano">
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <linearGradient id="fondo" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#F3E9D9"/>
+      <stop offset="100%" stop-color="#E3D2BB"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#fondo)"/>
+  <circle cx="200" cy="215" r="128" fill="#F7F1E7" fill-opacity="0.55"/>
+  <g fill="none" stroke="#9C7048" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="200" cy="228" rx="120" ry="56" fill="#DCC9AC"/>
+    <path d="M80 228v22c0 31 54 56 120 56s120-25 120-56v-22"/>
+    <ellipse cx="200" cy="228" rx="88" ry="38" stroke-width="5" opacity="0.6"/>
+  </g>
+  <text x="200" y="432" font-family="Georgia, serif" font-size="27" fill="#7A5B3D" text-anchor="middle" letter-spacing="1">Bandejas</text>
+  <rect width="400" height="500" filter="url(#grano)" opacity="0.07"/>
+</svg>

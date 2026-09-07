@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Floreros">
+  <defs>
+    <filter id="grano">
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <linearGradient id="fondo" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#F3E9D9"/>
+      <stop offset="100%" stop-color="#E3D2BB"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#fondo)"/>
+  <circle cx="200" cy="215" r="128" fill="#F7F1E7" fill-opacity="0.55"/>
+  <g fill="none" stroke="#9C7048" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M186 108c-4 22 6 34 22 42M214 122c-14 10-18 22-14 34"/>
+    <path d="M182 168h36v26h-36z" fill="#DCC9AC"/>
+    <path d="M176 194c-26 14-38 40-38 68v40a24 24 0 0 0 24 24h76a24 24 0 0 0 24-24v-40c0-28-12-54-38-68z" fill="#DCC9AC"/>
+  </g>
+  <text x="200" y="432" font-family="Georgia, serif" font-size="27" fill="#7A5B3D" text-anchor="middle" letter-spacing="1">Floreros</text>
+  <rect width="400" height="500" filter="url(#grano)" opacity="0.07"/>
+</svg>

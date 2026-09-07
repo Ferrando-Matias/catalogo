@@ -1,0 +1,14 @@
+{
+  "name": "artesanias-vv-catalogo",
+  "version": "1.0.0",
+  "description": "Catálogo web de Artesanías V.V para feria, con carrito y pedido por WhatsApp",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i css/input.css -o css/styles.css --minify",
+    "watch:css": "tailwindcss -i css/input.css -o css/styles.css --minify --watch",
+    "dev": "npx http-server -p 8080"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
