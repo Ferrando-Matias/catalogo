@@ -1,39 +1,27 @@
 /**
  * ARTESANÍAS V.V — catálogo de productos
  * ============================================================
- * ESTE ARCHIVO SE PUEDE EDITAR DE DOS MANERAS:
+ * Archivo generado desde el panel de administración (admin.html)
+ * el 7/9/2026, 03:08:01.
  *
- *   1) Desde el panel de administración (recomendado):
- *      abrí admin.html en el navegador, entrá con tu usuario y
- *      contraseña, cargá los cambios y descargá el archivo
- *      actualizado. No hace falta tocar nada de código.
+ * Se puede seguir editando desde el panel o a mano, respetando
+ * las comas y las comillas.
  *
- *   2) A mano, editando la lista de abajo (respetando comas y comillas).
+ * Campos: id (único) · name · category (id de CATEGORIES) ·
+ * price (número o null = "A consultar") · desc · img ·
+ * visible (se muestra o no) · destacado (aparece primero).
+ * El orden de la lista es el orden en que aparecen las piezas.
  * ============================================================
- *
- * Campos de cada producto:
- *   id        -> identificador único, no repetir (texto sin espacios)
- *   name      -> nombre que ve el cliente
- *   category  -> tiene que ser uno de los "id" de CATEGORIES
- *   price     -> precio en pesos, SOLO NÚMERO (sin puntos ni $). Ej: 8500
- *                Si todavía no está definido, dejalo en null: el catálogo
- *                muestra "A consultar" y no lo suma al total.
- *   desc      -> descripción corta (opcional, puede quedar "")
- *   img       -> ruta a la foto (o el placeholder de la categoría)
- *   visible   -> true = se muestra en el catálogo / false = queda oculto
- *   destacado -> true = aparece primero y en la fila "Destacadas"
- *
- * El ORDEN de esta lista es el orden en que aparecen las piezas.
  */
 
 const CATEGORIES = [
-  { id: "velas", name: "Velas", icon: "🕯️" },
-  { id: "difusores", name: "Difusores", icon: "💧" },
-  { id: "bandejas", name: "Bandejas", icon: "🍽️" },
-  { id: "floreros", name: "Floreros", icon: "🌿" },
-  { id: "figuras", name: "Figuras 3D", icon: "🗿" },
-  { id: "centros-mesa", name: "Centros de Mesa", icon: "🕊️" },
-  { id: "yeso", name: "Yeso (materia prima)", icon: "🧱" },
+  { id: "velas", name: "Velas" },
+  { id: "difusores", name: "Difusores" },
+  { id: "bandejas", name: "Bandejas" },
+  { id: "floreros", name: "Floreros" },
+  { id: "figuras", name: "Figuras 3D" },
+  { id: "centros-mesa", name: "Centros de Mesa" },
+  { id: "yeso", name: "Yeso (materia prima)" },
 ];
 
 const PRODUCTS = [
@@ -54,6 +42,7 @@ const PRODUCTS = [
   // ---- BANDEJAS ----
   { id: "bandeja-oval-yeso", name: "Bandeja Oval de Yeso", category: "bandejas", price: null, desc: "", img: "assets/img/placeholder-bandejas.svg", visible: true, destacado: false },
   { id: "bandeja-cuadrada-yeso", name: "Bandeja Cuadrada de Yeso", category: "bandejas", price: null, desc: "", img: "assets/img/placeholder-bandejas.svg", visible: true, destacado: false },
+  { id: "bandeja-prueba", name: "Bandeja Prueba", category: "bandejas", price: 15000, desc: "", img: "assets/img/placeholder-bandejas.svg", visible: true, destacado: false },
   { id: "bandeja-redonda", name: "Bandeja Redonda", category: "bandejas", price: null, desc: "", img: "assets/img/placeholder-bandejas.svg", visible: true, destacado: false },
   { id: "bandeja-redonda-3d", name: "Bandeja Redonda 3D", category: "bandejas", price: null, desc: "", img: "assets/img/placeholder-bandejas.svg", visible: true, destacado: false },
   { id: "bandeja-oval-3d", name: "Bandeja Oval 3D", category: "bandejas", price: null, desc: "", img: "assets/img/placeholder-bandejas.svg", visible: true, destacado: false },
@@ -64,9 +53,8 @@ const PRODUCTS = [
   { id: "florero-3d", name: "Florero 3D", category: "floreros", price: null, desc: "", img: "assets/img/placeholder-floreros.svg", visible: true, destacado: false },
 
   // ---- FIGURAS 3D ----
-  { id: "ying-yang-yeso", name: "Ying y Yang de Yeso", category: "figuras", price: null, desc: "", img: "assets/img/placeholder-figuras.svg", visible: true, destacado: false },
   { id: "esculturas-3d", name: "Esculturas 3D", category: "figuras", price: null, desc: "", img: "assets/img/placeholder-figuras.svg", visible: true, destacado: false },
-  { id: "elefante-chico-3d", name: "Elefante Chico 3D", category: "figuras", price: null, desc: "", img: "assets/img/placeholder-figuras.svg", visible: true, destacado: false },
+  { id: "elefante-chico-3d", name: "Elefante Chico 3D", category: "figuras", price: null, desc: "", img: "assets/img/placeholder-figuras.svg", visible: true, destacado: true },
   { id: "elefante-grande-3d", name: "Elefante Grande 3D", category: "figuras", price: null, desc: "", img: "assets/img/placeholder-figuras.svg", visible: true, destacado: false },
   { id: "cara-3d", name: "Cara 3D", category: "figuras", price: null, desc: "", img: "assets/img/placeholder-figuras.svg", visible: true, destacado: false },
   { id: "caballo-3d", name: "Caballo 3D", category: "figuras", price: null, desc: "", img: "assets/img/placeholder-figuras.svg", visible: true, destacado: false },
@@ -84,7 +72,9 @@ const PRODUCTS = [
   { id: "centro-mesa-3d", name: "Centro de Mesa 3D", category: "centros-mesa", price: null, desc: "", img: "assets/img/placeholder-centros-mesa.svg", visible: true, destacado: false },
 
   // ---- YESO (MATERIA PRIMA) ----
+  { id: "ying-yang-yeso", name: "Ying y Yang de Yeso", category: "yeso", price: null, desc: "", img: "assets/img/placeholder-yeso.svg", visible: true, destacado: false },
   { id: "yeso-basico", name: "Yeso Básico", category: "yeso", price: null, desc: "", img: "assets/img/placeholder-yeso.svg", visible: true, destacado: false },
   { id: "yeso-mediano", name: "Yeso Mediano", category: "yeso", price: null, desc: "", img: "assets/img/placeholder-yeso.svg", visible: true, destacado: false },
   { id: "yeso-extra", name: "Yeso Extra", category: "yeso", price: null, desc: "", img: "assets/img/placeholder-yeso.svg", visible: true, destacado: false },
+
 ];
