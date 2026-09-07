@@ -2,7 +2,7 @@
  * ARTESANÍAS V.V — catálogo de productos
  * ============================================================
  * Archivo generado desde el panel de administración (admin.html)
- * el 7/9/2026, 03:08:01.
+ * el 7/9/2026, 03:18:52.
  *
  * Se puede seguir editando desde el panel o a mano, respetando
  * las comas y las comillas.
@@ -40,7 +40,7 @@ const PRODUCTS = [
   { id: "difusores-vidrio", name: "Difusores de Vidrio", category: "difusores", price: null, desc: "", img: "assets/img/placeholder-difusores.svg", visible: true, destacado: false },
 
   // ---- BANDEJAS ----
-  { id: "bandeja-oval-yeso", name: "Bandeja Oval de Yeso", category: "bandejas", price: null, desc: "", img: "assets/img/placeholder-bandejas.svg", visible: true, destacado: false },
+  { id: "bandeja-oval-yeso", name: "Bandeja Oval de Yeso", category: "bandejas", price: null, desc: "", img: "assets/img/bandeja-oval-yeso-e1q5.webp", visible: true, destacado: false },
   { id: "bandeja-cuadrada-yeso", name: "Bandeja Cuadrada de Yeso", category: "bandejas", price: null, desc: "", img: "assets/img/placeholder-bandejas.svg", visible: true, destacado: false },
   { id: "bandeja-prueba", name: "Bandeja Prueba", category: "bandejas", price: 15000, desc: "", img: "assets/img/placeholder-bandejas.svg", visible: true, destacado: false },
   { id: "bandeja-redonda", name: "Bandeja Redonda", category: "bandejas", price: null, desc: "", img: "assets/img/placeholder-bandejas.svg", visible: true, destacado: false },
